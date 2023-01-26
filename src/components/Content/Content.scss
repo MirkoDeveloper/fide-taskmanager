@@ -1,0 +1,152 @@
+.fd-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 30px;
+
+    &__items {
+        display: flex;
+        column-gap: 20px;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 1440px) {
+            column-gap: 20px;
+        }
+
+        &.col-1 {
+            .fd-content__first,
+            .fd-content__second,
+            .fd-content__third,
+            .fd-content__fourth {
+                margin-top: 20px;
+                flex: 1;
+
+                @media only screen and (max-width: 1440px) {
+                    width: 100%;
+                    flex: none !important;
+                }
+
+                @media only screen and (max-width: 1040px) {
+                    width: 100%;
+                    flex: none !important;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    width: 100%;
+                    flex: none !important;
+                }
+
+                > .fd-card {
+                    margin-bottom: 20px;
+                }
+
+                .fd-headings {
+                    &__title {
+                        font-size: 18px;
+
+                        .fd-numbers {
+                            margin-left: 6px;
+                            font-weight: 400 !important;
+                            color: $color-text--light;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.col-2 {
+            .fd-content__first,
+            .fd-content__second,
+            .fd-content__third,
+            .fd-content__fourth {
+                margin-top: 20px;
+                flex: 1;
+
+                @media only screen and (max-width: 1440px) {
+                    width: calc(50% - 20px);
+                    flex: none !important;
+                }
+
+                @media only screen and (max-width: 1040px) {
+                    width: calc(50% - 20px);
+                    flex: none !important;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    width: 100%;
+                    flex: none !important;
+                }
+
+                > .fd-card {
+                    margin-bottom: 20px;
+                }
+
+                .fd-headings {
+                    &__title {
+                        font-size: 18px;
+
+                        .fd-numbers {
+                            margin-left: 6px;
+                            font-weight: 400 !important;
+                            color: $color-text--light;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.col-3 {
+            .fd-content__first,
+            .fd-content__second,
+            .fd-content__third,
+            .fd-content__fourth {
+                margin-top: 20px;
+                flex: 1;
+
+                &.full {
+                    display: flex;
+
+                    &:first-child {
+                        margin-right: 30px;
+                    }
+                }
+
+                @media only screen and (max-width: 1440px) {
+                    width: calc(33.3% - 20px);
+                    flex: none !important;
+                }
+
+                @media only screen and (max-width: 1040px) {
+                    width: calc(50% - 20px);
+                    flex: none !important;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    width: 100%;
+                    flex: none !important;
+                }
+
+                > .fd-card {
+                    margin-bottom: 20px;
+                }
+
+                .fd-headings {
+                    &__title {
+                        font-size: 18px;
+
+                        .fd-numbers {
+                            margin-left: 6px;
+                            font-weight: 400 !important;
+                            color: $color-text--light;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

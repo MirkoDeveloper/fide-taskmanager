@@ -1,0 +1,51 @@
+.fd-projectlist {
+    margin-top: 30px;
+    &__commands,
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        background: #fff;
+
+        .title {
+            flex: 3;
+        }
+
+        > * {
+            flex: 1;
+            padding: 10px 16px;
+            border: 1px solid darken($color-background, 3);
+        }
+    }
+
+    &__commands {
+        .title {
+            flex: 3;
+        }
+
+        > * {
+            flex: 1;
+            color: $color-text--light;
+            font-weight: 400;
+            font-size: 15px;
+        }
+    }
+
+    &__list {
+        margin-top: 6px;
+    }
+
+    &__item {
+        transition: background $transition 0.2s;
+        > * {
+            color: $color-text;
+            font-weight: 400;
+            font-size: 17px;
+        }
+
+        &:hover {
+            background: lighten($color-background, 1);
+            // background: rgba($color-secondary, 0.2);
+        }
+    }
+}

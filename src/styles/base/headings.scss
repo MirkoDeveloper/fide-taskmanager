@@ -1,0 +1,27 @@
+/* @start: Headings */
+.fd-headings {
+    padding-bottom: 12px;
+    &__title {
+        font-weight: 900;
+    }
+
+    &__subtitle {
+        font-family: $font-headings;
+        font-weight: 400;
+        font-size: 36px;
+        font-style: italic;
+    }
+
+    &__text {
+        font-size: 20px;
+        font-family: $font-body;
+        font-weight: 400;
+        + * {
+            margin-top: 50px;
+        }
+    }
+
+    p:not(:first-child) {
+        margin-top: 12px;
+    }
+}

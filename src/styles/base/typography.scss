@@ -1,0 +1,89 @@
+/* @start: Typography */
+body,
+input,
+button,
+select,
+textarea {
+    color: $color-text;
+    font-family: $font-body;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-text;
+    font-family: $font-headings;
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* @start: Headings */
+.md-headings {
+    margin-bottom: 0;
+    &__title {
+        font-size: 60px;
+        color: white;
+        font-weight: bold;
+
+        + * {
+            margin-top: 8px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    &__text {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.4;
+        margin-top: 20px;
+        p:not(:first-child) {
+            margin-top: 30px;
+        }
+    }
+}

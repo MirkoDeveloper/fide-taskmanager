@@ -1,0 +1,15 @@
+.fd-mainbar {
+    width: 100%;
+    background-color: white;
+    border-radius: ($border-radius - 15px);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+    &__left,
+    &__right {
+        display: flex;
+    }
+}

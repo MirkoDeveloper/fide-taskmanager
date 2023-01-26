@@ -6,7 +6,7 @@ export default function Home() {
         <main>
             <div className="container-fluid g-0 d-flex">
                 <Navbar />
-                <Content />
+                <Content dynamicProject={1} />
             </div>
         </main>
     );

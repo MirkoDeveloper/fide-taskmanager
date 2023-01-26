@@ -1,0 +1,22 @@
+// -> COLORS
+$color-primary: #ffe032;
+$color-primary--dark: #fd752f;
+
+$color-secondary: #0b6581;
+
+$color-background: #f7f6f4;
+
+$color-text: #282828;
+$color-text--light: #424242;
+
+// -> FONT
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;500;700;900&display=swap");
+
+$font-headings: "Inter";
+$font-body: "Inter";
+
+// -> UTILS
+$border-radius: 30px;
+
+// -> TRANSITION
+$transition: cubic-bezier(0.7, 0, 0.2, 1);

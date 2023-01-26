@@ -1,0 +1,27 @@
+// -> BASE
+@import "./base/variables.scss";
+@import "./base/base.scss";
+@import "./base/utils.scss";
+@import "./base/typography.scss";
+@import "./base/headings.scss";
+
+// -> UI
+@import "./UI/buttons.scss";
+@import "./UI/form.scss";
+@import "../components/UI/Card/Card.scss";
+
+// -> COMPONENTS
+@import "../components/Navbar/Navbar.scss";
+@import "../components/MainBar/MainBar.scss";
+@import "../components/Account/Account.scss";
+@import "../components/Content/Content.scss";
+@import "../components/Commands/Commands.scss";
+@import "../components/Commands/LayoutSwitcher/LayoutSwitcher.scss";
+@import "../components/Commands/AddProject/AddProject.scss";
+@import "../components/Project/ProjectList/ProjectList.scss";
+@import "../components/Task/TaskItem/TaskItem.scss";
+
+// -> VENDOR
+// @import "./vendor/swiper";
+
+// -> TESTING

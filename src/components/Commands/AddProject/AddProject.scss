@@ -1,0 +1,18 @@
+// -> AddProject
+.fd-commands {
+    &__addproject {
+        background-color: $color-primary--dark;
+        border-radius: ($border-radius - 20px);
+        padding: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+    }
+}
