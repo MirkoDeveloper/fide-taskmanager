@@ -1,13 +1,22 @@
-import Card from "../UI/Card/Card";
-import MainBar from "../MainBar/MainBar";
-import Commands from "../Commands/Commands";
-
+// -> NEXT COMPONENTS
 import { useRouter } from "next/router";
 import Link from "next/link";
+
+// -> COMPONENTS
 import Project from "../Project/Project";
 import ProjectList from "../Project/ProjectList/ProjectList";
 import TaskItem from "../Task/TaskItem/TaskItem";
+import Card from "../UI/Card/Card";
+import MainBar from "../MainBar/MainBar";
+import Commands from "../Commands/Commands";
+import Login from "../Login/Login";
+
+// -> ?
 import { INTERNALS } from "next/dist/server/web/spec-extension/request";
+
+// -> ASSETS
+import logo from "../../assets/images/fides-logo.png";
+import Button from "../UI/Button/Button";
 
 const Content = (props) => {
     const router = useRouter();
@@ -259,42 +268,60 @@ const Content = (props) => {
                 </div>
             );
             break;
+        case router.pathname === "/login":
+            return <Login />;
+            break;
         case dynamicProject === 1:
             const singleProject = initialList.find((obj) => obj.id == id);
 
             // COUNT TOTAL TASK
-            const taskCounter = singleProject.task.length; // 6
+            const taskCounter = singleProject.task.length;
+            // COUNT IN LAVORAZIONE TASK
+            const wipTaskCounter = singleProject.task.filter(
+                (task) => task.stato == "In Lavorazione"
+            ).length;
+            // COUNT TASK APERTI
+            const openedTaskCounter = singleProject.task.filter(
+                (task) => task.stato == "Aperto"
+            ).length;
+            // COUNT TASK CHIUSI
+            const closedTaskCounter = singleProject.task.filter(
+                (task) => task.stato == "Chiuso"
+            ).length;
+
             return (
                 <div className="fd-content">
                     <MainBar />
                     <Commands />
                     <h1>{singleProject.title}</h1>
-                    <div className="fd-content__items col-3">
-                        <div className="fd-content__first full">
-                            <div className="fd-button fd-button--primary">
-                                <div className="fd-button__label">
-                                    Complessivi
-                                </div>
-                            </div>
-                            <span>{taskCounter}</span>Task
-                        </div>
-                        <div className="fd-content__second">
-                            <h5>
-                                Task: <span>{taskCounter}</span>
-                            </h5>
-                        </div>
-                        <div className="fd-content__third">
-                            <h5>
-                                Task: <span>{taskCounter}</span>
-                            </h5>
+                    <div className="fd-content__items col-1">
+                        <div className="fd-content__first full d-flex gap">
+                            <Button
+                                title="task"
+                                type="green"
+                                cursor={false}
+                                suffix={taskCounter}
+                            />
+                            <Button
+                                title="In Lavorazione"
+                                type="violet"
+                                cursor={false}
+                                suffix={wipTaskCounter}
+                            />
+                            <Button
+                                title="Chiusi"
+                                type="red"
+                                cursor={false}
+                                suffix={closedTaskCounter}
+                            />
                         </div>
                     </div>
                     <div className="fd-project">
-                        <div class="fd-project__commands fd-shadow">
-                            <div class="title">Task</div>
-                            <div class="key">Chiave</div>
-                            <div class="type">Tipo di Task</div>
-                            <div class="date">Stato</div>
+                        <div className="fd-project__commands fd-shadow">
+                            <div className="title">Task</div>
+                            <div className="key">Chiave</div>
+                            <div className="type">Tipo di Task</div>
+                            <div className="date">Stato</div>
                         </div>
                         <div className="fd-project__tasks">
                             {singleProject.task.map((item, index, i) => (

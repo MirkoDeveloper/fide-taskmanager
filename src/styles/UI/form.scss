@@ -4,7 +4,7 @@
     &__input {
         width: 100%;
         background-color: $color-background;
-        border-radius: $border-radius;
+        border-radius: $border-radius - 20px;
         outline: 0px !important;
         border: 2px solid white;
         font-size: 15px;
@@ -13,6 +13,11 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         svg {
             margin-left: 24px;
@@ -41,6 +46,20 @@
         &::placeholder {
             font-size: inherit;
             color: inherit;
+        }
+    }
+
+    button {
+        background-color: $color-secondary;
+        border: 0 !important;
+        outline: 0;
+        padding: 6px 20px;
+        color: white;
+        border-radius: $border-radius - 20px;
+        transition: background 0.2s $transition;
+
+        &:hover {
+            background: darken($color-secondary, 3);
         }
     }
 }

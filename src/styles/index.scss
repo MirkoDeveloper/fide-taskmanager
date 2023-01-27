@@ -6,7 +6,7 @@
 @import "./base/headings.scss";
 
 // -> UI
-@import "./UI/buttons.scss";
+@import "../components/UI/Button/Button.scss";
 @import "./UI/form.scss";
 @import "../components/UI/Card/Card.scss";
 
@@ -20,6 +20,7 @@
 @import "../components/Commands/AddProject/AddProject.scss";
 @import "../components/Project/ProjectList/ProjectList.scss";
 @import "../components/Task/TaskItem/TaskItem.scss";
+@import "../components/Login/Login.scss";
 
 // -> VENDOR
 // @import "./vendor/swiper";

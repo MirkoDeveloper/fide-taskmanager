@@ -38,6 +38,16 @@
                     flex: none !important;
                 }
 
+                &.gap {
+                    > * {
+                        margin-right: 16px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
                 > .fd-card {
                     margin-bottom: 20px;
                 }

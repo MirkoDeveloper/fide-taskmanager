@@ -13,14 +13,19 @@ $btn: fd-btn;
     vertical-align: middle;
     outline: 0 !important;
     text-decoration: none !important;
-    display: inline-block;
+    display: flex;
     overflow: hidden;
     user-select: none;
     appearance: none;
     cursor: pointer;
     transition: border 0.3s $transition, background 0.3s $transition;
 
-    &__label {
+    &.no-cursor {
+        cursor: default !important;
+    }
+
+    &__label,
+    &__suffix {
         position: relative;
         font-size: 18px;
         font-family: $font-headings;
@@ -31,6 +36,10 @@ $btn: fd-btn;
         justify-content: center;
         align-items: center;
         gap: 5px;
+    }
+
+    &__suffix {
+        padding-left: 10px;
     }
 
     &--full {
@@ -54,7 +63,8 @@ $btn: fd-btn;
         background-color: $color-primary;
         transition: background-color $transition 0.2s;
 
-        .md-btn__label {
+        .fd-btn__label,
+        .fd-btn__suffix {
             color: white;
             transition: color $transition 0.2s;
         }
@@ -62,7 +72,7 @@ $btn: fd-btn;
         &:hover {
             background-color: darken($color-primary, 5);
 
-            .md-btn__label {
+            .fd-btn__label {
                 color: white;
             }
         }
@@ -72,31 +82,79 @@ $btn: fd-btn;
         border-color: $color-secondary;
         background-color: $color-secondary;
 
-        .md-btn__label {
+        .fd-btn__label,
+        .fd-btn__suffix {
             color: white;
             z-index: 3;
         }
 
-        &:after {
-            content: "";
-            border-radius: inherit;
-            width: 0;
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            background-color: white;
-            z-index: 2;
-            transition: width $transition 0.3s;
-        }
-
         &:hover {
-            .md-btn__label {
+            .fd-btn__label {
                 color: $color-primary;
             }
 
             &:after {
                 width: 100%;
+            }
+        }
+    }
+
+    &--red {
+        border-color: $color-red;
+        background-color: $color-red;
+        transition: background-color $transition 0.2s;
+
+        .fd-btn__label,
+        .fd-btn__suffix {
+            color: white;
+            transition: color $transition 0.2s;
+        }
+
+        &:hover {
+            background-color: darken($color-red, 5);
+
+            .fd-btn__label {
+                color: white;
+            }
+        }
+    }
+
+    &--violet {
+        border-color: $color-violet;
+        background-color: $color-violet;
+        transition: background-color $transition 0.2s;
+
+        .fd-btn__label,
+        .fd-btn__suffix {
+            color: white;
+            transition: color $transition 0.2s;
+        }
+
+        &:hover {
+            background-color: darken($color-violet, 5);
+
+            .fd-btn__label {
+                color: white;
+            }
+        }
+    }
+
+    &--green {
+        border-color: $color-green;
+        background-color: $color-green;
+        transition: background-color $transition 0.2s;
+
+        .fd-btn__label,
+        .fd-btn__suffix {
+            color: white;
+            transition: color $transition 0.2s;
+        }
+
+        &:hover {
+            background-color: darken($color-green, 5);
+
+            .fd-btn__label {
+                color: white;
             }
         }
     }
