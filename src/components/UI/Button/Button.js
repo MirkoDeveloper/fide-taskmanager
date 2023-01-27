@@ -1,5 +1,19 @@
 const Button = (props) => {
     const cursorClass = props.cursor === true ? "" : " no-cursor";
+    const opacityClass = props.opacity === false ? "" : " opacity";
+    let dimensionClass;
+    switch (props.dimension) {
+        case "small":
+            dimensionClass = " fd-btn--small";
+            break;
+        case "big":
+            dimensionClass = " fd-btn--big";
+            break;
+
+        default:
+            dimensionClass = "";
+            break;
+    }
     let btnTypeClasses;
     switch (props.type) {
         case "primary":
@@ -35,7 +49,11 @@ const Button = (props) => {
             break;
     }
     return (
-        <div className={btnTypeClasses + cursorClass}>
+        <a
+            className={
+                btnTypeClasses + cursorClass + opacityClass + dimensionClass
+            }
+        >
             {props.icon && <span className="fd-btn__icon">{props.icon}</span>}
             <span className="fd-btn__label">{props.title}</span>
             {props.suffix && (
@@ -43,7 +61,7 @@ const Button = (props) => {
             )}
 
             {props.children}
-        </div>
+        </a>
     );
 };
 

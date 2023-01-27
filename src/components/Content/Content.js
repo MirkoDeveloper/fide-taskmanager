@@ -17,6 +17,7 @@ import { INTERNALS } from "next/dist/server/web/spec-extension/request";
 // -> ASSETS
 import logo from "../../assets/images/fides-logo.png";
 import Button from "../UI/Button/Button";
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 
 const Content = (props) => {
     const router = useRouter();
@@ -191,6 +192,7 @@ const Content = (props) => {
                 <div className="fd-content">
                     <MainBar />
                     <Commands />
+                    <Breadcrumbs />
                     <div className="fd-content__items">
                         <div className="fd-content__first">
                             <div className="fd-headings">
@@ -264,6 +266,7 @@ const Content = (props) => {
                 <div className="fd-content">
                     <MainBar />
                     {/* <Commands /> */}
+                    <Breadcrumbs />
                     <ProjectList />
                 </div>
             );
@@ -293,24 +296,31 @@ const Content = (props) => {
                 <div className="fd-content">
                     <MainBar />
                     <Commands />
+                    <Breadcrumbs />
                     <h1>{singleProject.title}</h1>
                     <div className="fd-content__items col-1">
                         <div className="fd-content__first full d-flex gap">
                             <Button
                                 title="task"
                                 type="green"
+                                dimension="small"
+                                opacity={true}
                                 cursor={false}
                                 suffix={taskCounter}
                             />
                             <Button
                                 title="In Lavorazione"
                                 type="violet"
+                                dimension="small"
+                                opacity={true}
                                 cursor={false}
                                 suffix={wipTaskCounter}
                             />
                             <Button
                                 title="Chiusi"
                                 type="red"
+                                dimension="small"
+                                opacity={true}
                                 cursor={false}
                                 suffix={closedTaskCounter}
                             />
@@ -343,6 +353,7 @@ const Content = (props) => {
         default:
             return (
                 <>
+                    <Breadcrumbs />
                     {dynamicProject}
                     <h1>default</h1>
                     <h2>{id}</h2>
