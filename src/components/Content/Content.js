@@ -192,7 +192,7 @@ const Content = (props) => {
                 <div className="fd-content">
                     <MainBar />
                     <Commands />
-                    <Breadcrumbs />
+                    {/* <Breadcrumbs /> */}
                     <div className="fd-content__items">
                         <div className="fd-content__first">
                             <div className="fd-headings">
@@ -265,7 +265,7 @@ const Content = (props) => {
             return (
                 <div className="fd-content">
                     <MainBar />
-                    {/* <Commands /> */}
+                    <Commands />
                     <Breadcrumbs />
                     <ProjectList />
                 </div>

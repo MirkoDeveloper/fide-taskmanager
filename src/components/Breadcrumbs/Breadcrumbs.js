@@ -37,7 +37,7 @@ const Breadcrumbs = () => {
 
     return (
         <nav aria-label="breadcrumbs">
-            <ol className="breadcrumb">
+            <ul className="fd-breadcrumbs">
                 <li>
                     <a href="/">HOME</a>
                 </li>
@@ -50,7 +50,7 @@ const Breadcrumbs = () => {
                         </li>
                     );
                 })}
-            </ol>
+            </ul>
         </nav>
     );
 };
