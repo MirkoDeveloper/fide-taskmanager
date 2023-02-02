@@ -26,7 +26,9 @@ const Content = (props) => {
     const dynamicProject = props.dynamicProject === 1 ? 1 : 0;
     const initialList = [
         {
-            title: "Progetto: ABC",
+            title: "Abbecedario",
+            acronym: "ABC",
+            projectLead: "Giuseppe Sette",
             id: 1,
             description:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sapiente aliquam quos enim eaque veniam odio saepe minima necessitatibus! Quo maxime ad pariatur, earum alias sunt commodi officiis officia assumenda?",
@@ -35,42 +37,42 @@ const Content = (props) => {
             date: "21 Aprile 2023",
             task: [
                 {
-                    key: "ABC123",
+                    key: "ABC",
                     id: 1,
                     title: "Implementazione XYZ nel ABC",
                     stato: "In Lavorazione",
                     tipologia: "Task",
                 },
                 {
-                    key: "XYZ321",
+                    key: "ABC",
                     id: 2,
                     title: "Implementazione ALTRO nel LIBRO",
                     stato: "In Lavorazione",
                     tipologia: "Task",
                 },
                 {
-                    key: "BCA999",
+                    key: "ABC",
                     id: 3,
                     title: "Implementazione LGT nel core asset",
                     stato: "In Lavorazione",
                     tipologia: "Task",
                 },
                 {
-                    key: "TCT333",
+                    key: "ABC",
                     id: 4,
                     title: "Lavorazione del core framework",
                     stato: "Chiuso",
                     tipologia: "Task",
                 },
                 {
-                    key: "LN22",
+                    key: "ABC",
                     id: 5,
                     title: "Risoluzione bug nei pagamaneti",
                     stato: "Chiuso",
                     tipologia: "Task",
                 },
                 {
-                    key: "NNL4728",
+                    key: "ABC",
                     id: 6,
                     title: "Implementazione del CSS",
                     stato: "Chiuso",
@@ -79,7 +81,9 @@ const Content = (props) => {
             ],
         },
         {
-            title: "Project: Alfabeto",
+            title: "Alfabeto",
+            acronym: "AFB",
+            projectLead: "Gianmarco Tocco",
             id: 2,
             description:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sapiente aliquam quos enim eaque veniam odio saepe minima necessitatibus! Quo maxime ad pariatur, earum alias sunt commodi officiis officia assumenda?",
@@ -88,42 +92,42 @@ const Content = (props) => {
             date: "12 Giugno 2023",
             task: [
                 {
-                    key: "ABC123",
+                    key: "AFB",
                     id: 1,
                     title: "Implementazione XYZ nel ABC",
                     stato: "In Lavorazione",
                     tipologia: "Task",
                 },
                 {
-                    key: "XYZ321",
+                    key: "AFB",
                     id: 2,
                     title: "Implementazione ALTRO nel LIBRO",
                     stato: "In Lavorazione",
                     tipologia: "Task",
                 },
                 {
-                    key: "BCA999",
+                    key: "AFB",
                     id: 3,
                     title: "Implementazione LGT nel core asset",
                     stato: "In Lavorazione",
                     tipologia: "Task",
                 },
                 {
-                    key: "TCT333",
+                    key: "AFB",
                     id: 4,
                     title: "Lavorazione del core framework",
                     stato: "Chiuso",
                     tipologia: "Task",
                 },
                 {
-                    key: "LN22",
+                    key: "AFB",
                     id: 5,
                     title: "Risoluzione bug nei pagamaneti",
                     stato: "Chiuso",
                     tipologia: "Task",
                 },
                 {
-                    key: "NNL4728",
+                    key: "AFB",
                     id: 6,
                     title: "Implementazione del CSS",
                     stato: "Chiuso",
@@ -132,7 +136,9 @@ const Content = (props) => {
             ],
         },
         {
-            title: "Progetto: Trenitialia",
+            title: "Trenitialia",
+            acronym: "TRN",
+            projectLead: "Renato Conti",
             id: 3,
             description:
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sapiente aliquam quos enim eaque veniam odio saepe minima necessitatibus! Quo maxime ad pariatur, earum alias sunt commodi officiis officia assumenda?",
@@ -141,42 +147,42 @@ const Content = (props) => {
             date: "30 Luglio 2023",
             task: [
                 {
-                    key: "ABC123",
+                    key: "TRN",
                     id: 1,
                     title: "Implementazione XYZ nel ABC",
                     stato: "In Lavorazione",
                     tipologia: "Task",
                 },
                 {
-                    key: "XYZ321",
+                    key: "TRN",
                     id: 2,
                     title: "Implementazione ALTRO nel LIBRO",
                     stato: "In Lavorazione",
                     tipologia: "Task",
                 },
                 {
-                    key: "BCA999",
+                    key: "TRN",
                     id: 3,
                     title: "Implementazione LGT nel core asset",
                     stato: "In Lavorazione",
                     tipologia: "Task",
                 },
                 {
-                    key: "TCT333",
+                    key: "TRN",
                     id: 4,
                     title: "Lavorazione del core framework",
                     stato: "Chiuso",
                     tipologia: "Task",
                 },
                 {
-                    key: "LN22",
+                    key: "TRN",
                     id: 5,
                     title: "Risoluzione bug nei pagamaneti",
                     stato: "Chiuso",
                     tipologia: "Task",
                 },
                 {
-                    key: "NNL4728",
+                    key: "TRN",
                     id: 6,
                     title: "Implementazione del CSS",
                     stato: "Chiuso",
@@ -267,7 +273,7 @@ const Content = (props) => {
                     <MainBar />
                     <Commands />
                     <Breadcrumbs />
-                    <ProjectList />
+                    <ProjectList list={initialList} />
                 </div>
             );
             break;

@@ -8,7 +8,7 @@ const TaskItem = (props) => {
             className="fd-project__task"
         >
             <h2 className="title">{props.title}</h2>
-            <div className="key">{props.chiave}</div>
+            <div className="key">{props.chiave + "-" + props.id}</div>
             <div className="type">{props.tipologia}</div>
             <div className="stato">{props.stato}</div>
         </Link>

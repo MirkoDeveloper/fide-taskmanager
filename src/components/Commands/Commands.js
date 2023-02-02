@@ -1,5 +1,5 @@
 import LayoutSwitcher from "./LayoutSwitcher/LayoutSwitcher";
-import AddProject from "./AddProject/AddProject";
+import AddItem from "./AddItem/AddItem";
 import { useState } from "react";
 
 const Commands = () => {
@@ -13,7 +13,7 @@ const Commands = () => {
                 />
             </div>
             <div className="fd-commands__right">
-                <AddProject />
+                <AddItem />
             </div>
         </div>
     );
