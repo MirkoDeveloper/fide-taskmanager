@@ -8,8 +8,8 @@ const AddItemSwitcher = (props) => {
     }, [moduleToLoad]);
 
     return (
-        <div className="fd-layout-switcher fd-shadow">
-            Cosa vuoi aggiungere?
+        <div className="fd-item-switcher fd-shadow">
+            <h4 className="fd-item-switcher__title">Cosa vuoi aggiungere?</h4>
             <label
                 onClick={() => setModuleToLoad("Progetto")}
                 className={moduleToLoad === "Progetto" ? "active" : ""}

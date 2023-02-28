@@ -1,0 +1,49 @@
+// -> Item Switcher
+.fd-item-switcher {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        text-align: center;
+        width: 100%;
+        font-size: 30px;
+        margin-bottom: 12px;
+    }
+
+    label {
+        margin-right: 10px;
+        width: auto;
+        height: auto;
+        padding: 10px;
+        border-radius: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform $transition 0.3s, background $transition 0.1s;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.active {
+            transform: scale(1.05);
+            background-color: rgba($color-primary--dark, 0.2);
+            border: 1px solid $color-primary--dark;
+        }
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        // opacity: 1;
+        // height: 20px;
+        // width: 20px;
+    }
+}

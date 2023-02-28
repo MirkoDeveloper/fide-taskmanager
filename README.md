@@ -38,3 +38,23 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+---
+
+FUNZIONALITÀ
+
+COMPLETE
+
+-   BREADCRUMBS AUTOMATICI
+-   ROUTING SYSTEM CON PAGE ID PER I PROGETTI/TASK/UTENTI
+-   VISTA DEI PROGETTI TABELLARE
+-   VISTA DEI PROGETTI NEL DETTAGLIO
+-   AGGIUNTA PROGETTO (OUTPUT JSON)
+-   AGGIUNTA UTENTE (OUTPUT JSON)
+-   AGGIUNTA TASK (OUTPUT JSON)
+
+IN SVILUPPO
+
+-   AGGIUNTA DEI PROGETTI AI PREFERITI (PER PINNARLI)
+-   FILTRO LIVE DEI TASK (NEL DETTAGLIO SUL PROGETTO)
+-   OUTPUT DEI TASK RELATIVI ALL'UTENTE NELLA SCHEDA MY TASK

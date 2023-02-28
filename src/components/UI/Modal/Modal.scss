@@ -21,6 +21,7 @@
     }
 
     &__inner {
+        // padding: 45px 60px;
         background-color: white;
         border-radius: $border-radius;
         max-width: 60%;
@@ -30,6 +31,19 @@
         flex-direction: column;
         z-index: 2;
         position: relative;
+
+        .fd-modal {
+            &__head {
+                border-radius: $border-radius $border-radius 0 0;
+                padding: 45px 60px 45px 60px;
+                background-color: $color-background;
+            }
+
+            &__body {
+                overflow: auto;
+                padding: 0 60px 45px 60px;
+            }
+        }
 
         .close {
             position: absolute;
@@ -50,6 +64,15 @@
             // &:hover {
             //     background-color: rgba($color-text--light, 0.2);
             // }
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            margin: 30px auto 0 auto;
+            flex-wrap: wrap;
         }
     }
 }

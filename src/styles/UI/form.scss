@@ -1,12 +1,30 @@
 .fd-form {
     display: flex;
 
+    &__wrapper {
+        width: 100%;
+        margin-bottom: 12px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .required {
+            color: $color-red;
+        }
+    }
+
     &__input {
         width: 100%;
         background-color: $color-background;
         border-radius: $border-radius - 20px;
         outline: 0px !important;
-        border: 2px solid white;
+        border: 2px solid darken($color-background, 10);
         font-size: 15px;
         color: $color-text--light;
         text-align: left;
@@ -14,6 +32,58 @@
         justify-content: flex-start;
         align-items: center;
         margin-bottom: 10px;
+        padding: 12px 24px;
+        transition: all 100ms;
+
+        &:hover {
+            border-color: darken($color-background, 20);
+        }
+
+        &:focus {
+            border-color: $color-secondary !important;
+        }
+
+        &-select {
+            .fd-form__input-select__control {
+                width: 100%;
+                background-color: $color-background;
+                border-radius: $border-radius - 20px;
+                outline: 0px !important;
+                border: 2px solid darken($color-background, 10);
+                font-size: 15px;
+                color: $color-text--light;
+                text-align: left;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 0;
+                padding: 4px 24px;
+
+                &--is-focused {
+                    box-shadow: none;
+                    border-color: $color-secondary !important;
+                }
+
+                &:hover {
+                    border-color: darken($color-background, 20);
+                }
+
+                > div {
+                    height: fit-content;
+                    padding: 0;
+                    line-height: 1;
+                }
+            }
+
+            .fd-form__input-select__placeholder,
+            .fd-form__input-select__indicator {
+                color: $color-text;
+            }
+        }
+
+        &.error {
+            border-color: $color-red;
+        }
 
         &:last-child {
             margin-bottom: 0;
@@ -25,10 +95,10 @@
             height: 20px;
         }
 
-        input {
+        input,
+        select {
             width: 100%;
             height: 100%;
-            padding: 12px 24px;
             background-color: transparent;
             outline: 0px !important;
             font-size: 15px;
@@ -39,24 +109,39 @@
 
         &.search {
             input {
-                padding: 12px 18px 12px 6px;
+                // padding: 5px !important;
             }
         }
 
-        &::placeholder {
-            font-size: inherit;
-            color: inherit;
+        &::placeholder,
+        > option {
+            font-size: 15px;
+            color: $color-text--light;
         }
+    }
+
+    &__error {
+        font-size: 16px;
+        color: $color-red;
     }
 
     button {
         background-color: $color-secondary;
         border: 0 !important;
         outline: 0;
+        margin-top: 20px;
         padding: 6px 20px;
         color: white;
         border-radius: $border-radius - 20px;
         transition: background 0.2s $transition;
+
+        &.full {
+            width: 100%;
+        }
+
+        &.large {
+            padding: 12px 30px;
+        }
 
         &:hover {
             background: darken($color-secondary, 3);
